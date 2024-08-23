@@ -1,0 +1,77 @@
+{
+  "name": "Animais",
+  "children": [
+    {
+      "name": "Mamíferos",
+      "children": [
+        {
+          "name": "Carnívoros",
+          "children": [
+            {
+              "name": "Felinos",
+              "children": [
+                { "name": "Leões", "children": [] },
+                { "name": "Tigres", "children": [] },
+                { "name": "Jaguars", "children": [] },
+                { "name": "Leopardos", "children": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Herbívoros",
+          "children": [
+            {
+              "name": "Equídeos",
+              "children": [
+                { "name": "Cavalos", "children": [] },
+                { "name": "Zebras", "children": [] },
+                { "name": "Asnos", "children": [] }
+              ]
+            },
+            {
+              "name": "Bovídeos",
+              "children": [
+                { "name": "Bois", "children": [] },
+                { "name": "Búfalos", "children": [] },
+                { "name": "Antílopes", "children": [] },
+                { "name": "Cabras", "children": [] }
+              ]
+            },
+            {
+              "name": "Primatas",
+              "children": [
+                { "name": "Gorilas", "children": [] },
+                { "name": "Chimpanzés", "children": [] },
+                { "name": "Orangotangos", "children": [] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aves",
+      "children": [
+        {
+          "name": "Rapinas",
+          "children": [
+            { "name": "Águias", "children": [] },
+            { "name": "Falcões", "children": [] },
+            { "name": "Corujas", "children": [] },
+            { "name": "Milhafres", "children": [] }
+          ]
+        },
+        {
+          "name": "Pássaros",
+          "children": [
+            { "name": "Canários", "children": [] },
+            { "name": "Papagaios", "children": [] },
+            { "name": "Pardais", "children": [] },
+            { "name": "Rouxinóis", "children": [] }
+          ]
+        }
+      ]
+    }
+  ]
+}
