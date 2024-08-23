@@ -20,7 +20,8 @@ async function bootstrap() {
   const startTimeAnalysis = process.hrtime();
 
   const result = analyzer.analyzePhrase(phrase);
-  console.log(result);
+  const categoryCounts = analyzer.countOccurrences(result);
+  console.log(categoryCounts);
 
   const endTimeAnalysis = process.hrtime(startTimeAnalysis);
   const timeTakenAnalysis =
