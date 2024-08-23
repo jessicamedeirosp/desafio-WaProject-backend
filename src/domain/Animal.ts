@@ -1,9 +1,9 @@
-interface IAnimal {
-  name: string,
-  children: IAnimal[]
+export interface IAnimal {
+  name: string;
+  children: IAnimal[];
 }
 
-class Animal {
+export class Animal {
   name: string;
   children: IAnimal[];
 
