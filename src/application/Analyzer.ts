@@ -1,6 +1,6 @@
 import { IAnimal } from "../domain/Animal";
 import { Hierarchy } from "../domain/Hierarchy";
-import { FileLoader } from "../infrastructure/FileLoader";
+import { FileLoader } from "../infra/FileLoader";
 
 interface ICountOccurrences {
   [key: string]: {
