@@ -2,7 +2,7 @@ import yargs, { Arguments } from "yargs";
 import { hideBin } from "yargs/helpers";
 
 interface IArguments {
-  depth: number;
+  depth: number | null;
   verbose: boolean;
   phrase: string;
 }
@@ -17,7 +17,7 @@ export class CommandLine {
           description: "The depth of the hierarchy to display",
           alias: "d",
           type: "number",
-          default: 0,
+          default: null,
           demandOption: true,
         },
         verbose: {
@@ -37,7 +37,7 @@ export class CommandLine {
       .parseSync() as Arguments<IArguments>;
   }
 
-  public getDepth(): number {
+  public getDepth(): number | null {
     return this.args.depth;
   }
 

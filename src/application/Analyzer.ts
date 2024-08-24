@@ -19,7 +19,7 @@ export class Analyzer extends FileLoader {
     this.hierarchy = new Hierarchy();
   }
 
-  analyzePhrase(phrase: string, depth: number = 0): string[] {
+  analyzePhrase(phrase: string, depth: number | null): string[] {
     const words = phrase.split(" ");
     const existWords = words
       .map((word) => {

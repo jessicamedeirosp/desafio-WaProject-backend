@@ -1,7 +1,7 @@
 import { IAnimal } from "./Animal";
 
 export class Hierarchy {
-  findByName(word: string, data: IAnimal, depth: number): string {
+  findByName(word: string, data: IAnimal, depth: number | null): string {
     const result: string[] = [];
 
     const search = (item: IAnimal, word: string): boolean => {
@@ -23,6 +23,11 @@ export class Hierarchy {
     };
 
     search(data, word);
+
+    if (depth === null) {
+      return result[result.length - 1];
+    }
+
     return result[depth];
   }
 
