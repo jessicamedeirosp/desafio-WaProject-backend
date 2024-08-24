@@ -17,6 +17,7 @@ export class CommandLine {
           description: "The depth of the hierarchy to display",
           alias: "d",
           type: "number",
+          default: 0,
           demandOption: true,
         },
         verbose: {
@@ -29,7 +30,7 @@ export class CommandLine {
           description: "The phrase to analyze",
           alias: "p",
           type: "string",
-          demandOption: true,
+          demandOption: false,
         },
       })
       .help()
