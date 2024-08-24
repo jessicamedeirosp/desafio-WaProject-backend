@@ -19,12 +19,12 @@ export class Analyzer extends FileLoader {
     this.hierarchy = new Hierarchy();
   }
 
-  analyzePhrase(phrase: string) {
+  analyzePhrase(phrase: string, depth: number = 0): string[] {
     const words = phrase.split(" ");
     const existWords = words
       .map((word) => {
-        const result = this.hierarchy.findByName(word, this.data);
-        if (result) return result.name;
+        const result = this.hierarchy.findByName(word, this.data, depth);
+        if (result) return result;
       })
       .filter((name): name is string => name !== undefined);
 

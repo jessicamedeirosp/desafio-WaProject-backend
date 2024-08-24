@@ -1,15 +1,29 @@
 import { IAnimal } from "./Animal";
 
 export class Hierarchy {
-  findByName(name: string, item: IAnimal): IAnimal | null {
-    if (this.normalizeWord(item.name) === this.normalizeWord(name)) return item;
+  findByName(word: string, data: IAnimal, depth: number): string {
+    const result: string[] = [];
 
-    for (const child of item.children) {
-      const result = this.findByName(name, child);
-      if (result) return result;
-    }
+    const search = (item: IAnimal, word: string): boolean => {
+      if (!item) return false;
 
-    return null;
+      result.push(item.name);
+
+      if (this.normalizeWord(item.name) === this.normalizeWord(word))
+        return true;
+
+      if (item.children) {
+        for (const child of item.children) {
+          if (search(child, word)) return true;
+        }
+      }
+
+      result.pop();
+      return false;
+    };
+
+    search(data, word);
+    return result[depth];
   }
 
   normalizeWord(word: string) {

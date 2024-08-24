@@ -5,7 +5,7 @@ async function bootstrap() {
   const startTimeParams = process.hrtime();
   const analyzer = new Analyzer();
   const commandLine = new CommandLine();
-  // const  depth = cliParser.getDepth();
+  const depth = commandLine.getDepth();
   const verbose = commandLine.isVerbose();
   const phrase = commandLine.getPhrase();
 
@@ -19,7 +19,14 @@ async function bootstrap() {
 
   const startTimeAnalysis = process.hrtime();
 
-  const result = analyzer.analyzePhrase(phrase);
+  const result = analyzer.analyzePhrase(phrase, depth);
+
+  if (!result.length) {
+    console.log(
+      `Na frase não existe nenhum filho do nível ${depth} e nem o nível ${depth} possui os termos especificados.`,
+    );
+  }
+
   const categoryCounts = analyzer.countOccurrences(result);
   console.log(categoryCounts);
 
