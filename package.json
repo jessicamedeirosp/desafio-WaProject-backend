@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tsx watch src/index.ts",
+    "test": "jest",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,md}",
@@ -35,7 +36,10 @@
     ]
   },
   "dependencies": {
+    "@types/jest": "^29.5.12",
     "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "yargs": "^17.7.2"
   }
 }
