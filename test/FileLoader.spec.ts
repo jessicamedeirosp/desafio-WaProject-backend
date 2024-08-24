@@ -1,5 +1,11 @@
+import { FileLoader } from "../src/infra/FileLoader";
+
 describe("FileLoader", () => {
-  test("for test", () => {
-    expect(2 + 2).toBe(4);
+  test("loadJsonFile should return mocked JSON data", () => {
+    const fileLoader = new FileLoader();
+    const data = fileLoader.loadJsonFile();
+
+    expect(data).toBeDefined();
+    expect(data.name).toBe("Animais");
   });
 });
